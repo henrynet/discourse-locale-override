@@ -199,8 +199,8 @@ zh_TW:
       category: "分類"
       posts: "貼文"
       topics: "標題"
-      latest: "最近"
-      latest_by: "最近由"
+      latest: "最新"
+      latest_by: "最新由"
       toggle_ordering: "顯示/隱藏排序控制"
       subcategories: "次分類"
       topic_stats: "新討論話題的數目。"
@@ -688,7 +688,7 @@ zh_TW:
         new: "沒有新的討論話題。"
         read: "你尚未閱讀任何討論話題。"
         posted: "你尚未在任何討論話題裡發表文章。"
-        latest: "沒有最近的討論話題。真令人難過。"
+        latest: "沒有最新的討論話題。真令人難過。"
         hot: "沒有熱門的討論話題。"
         category: "沒有 {{category}} 的討論話題。"
         top: "沒有精選討論話題。"
@@ -697,7 +697,7 @@ zh_TW:
           unread: '<p>你的未讀討論話題會出現在這裡。</p><p>預設上，以下話題會被標示成未讀話題，並且未讀文章數量 <span class="badge new-posts badge-notification">1</span> 會顯示：</p><ul><li>建立新的討論話題</li><li>回覆討論話題</li><li>閱讀討論話題超過 4 分鐘</li></ul><p>或若透過討論話題下面的通知設定追蹤或觀察。</p><p>你可以在<a href="%{userPrefsUrl}">偏好設定</a>中修改設定。</p>'
           starred: '<p>你打星號的討論話題會出現在這裡。</p><p>請透過以下方式標記或移除星號： </p><ul><li>按下位於任一討論話題標題旁的 <i class="fa fa-star"></i></li><li>按下討論話題最下方的星號按鈕</li></ul>'
       bottom:
-        latest: "已經沒有其它最近的討論話題了。"
+        latest: "已經沒有其它最新的討論話題了。"
         hot: "已經沒有其它熱門的討論話題了。"
         posted: "已經沒有其它討論話題了。"
         read: "已經沒有其它已讀的討論話題了。"
@@ -746,7 +746,7 @@ zh_TW:
       read_more: "要閱讀更多文章嗎? 請按 {{catLink}} 或 {{latestLink}}。"
       read_more_MF: "有 { UNREAD, plural, =0 {} one { <a href='/unread'>1 篇未讀</a> } other { <a href='/unread'># 篇未讀</a> } } { NEW, plural, =0 {} one { {BOTH, select, true{和 } false { } other{}} <a href='/new'>1 篇新</a> 討論話題} other { {BOTH, select, true{和 } false { } other{}} <a href='/new'># 篇新</a> 討論話題} } , or {CATEGORY, select, true {在 {catLink} 瀏覽其他討論話題} false {{latestLink}} other {}}."
       browse_all_categories: 瀏覽所有分類
-      view_latest_topics: 檢視最近的文章
+      view_latest_topics: 檢視最新的文章
       suggest_create_topic: 建立一個新討論話題吧？
       jump_reply_up: jump to earlier reply
       jump_reply_down: jump to later reply
@@ -900,7 +900,7 @@ zh_TW:
       edit_reason: "原因: "
       post_number: "文章 {{number}}"
       in_reply_to: "回覆"
-      last_edited_on: "文章最近編輯的時間"
+      last_edited_on: "文章最後編輯的時間"
       reply_as_new_topic: "回覆為關連的討論話題"
       continue_discussion: "繼續 {{postLink}} 的討論:"
       follow_quote: "跳到引用的文章"
@@ -1202,8 +1202,8 @@ zh_TW:
       with_topics: "%{filter} 討論話題"
       with_category: "%{filter} %{category} 討論話題"
       latest:
-        title: "最近"
-        help: "最近的討論話題"
+        title: "最新"
+        help: "最新的討論話題"
       hot:
         title: "熱門"
         help: "最熱門的討論話題"
@@ -1244,7 +1244,7 @@ zh_TW:
           zero: "{{categoryName}}"
           one: "{{categoryName}} (1)"
           other: "{{categoryName}} ({{count}})"
-        help: "{{categoryName}} 分類最近的討論話題"
+        help: "{{categoryName}} 分類最新的討論話題"
       top:
         title: "精選"
         help: "在本年、月、週或日最熱門的討論話題"
