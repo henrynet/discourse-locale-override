@@ -221,11 +221,13 @@ zh_TW:
       username: "用戶名稱"
       trust_level: "TL"
       read_time: "閱讀時間"
+      topics_entered: "已閱讀的討論話題"
+      post_count: "# 文章"
       confirm_delete_other_accounts: "你確定要刪除這些帳號?"
     user:
       said: "{{username}}："
       profile: "基本資料"
-      mute: "靜音"
+      mute: "忽略"
       edit: "編輯喜好設定"
       download_archive: "下載我的文章存檔"
       new_private_message: "新私人訊息"
@@ -253,12 +255,12 @@ zh_TW:
       suspended_notice: "此用戶已被停權至 {{date}}。"
       suspended_reason: "原因: "
       github_profile: "Github"
-      mailing_list_mode: "每當有新討論話題時，你將會收到郵件。(除非你將該討論話題或分類設為靜音)"
+      mailing_list_mode: "每當有新討論話題時，你將會收到郵件。(除非你將該討論話題或分類設為忽略)"
       watched_categories: "關注"
       watched_categories_instructions: "你將會自動關注在此分類的新討論話題。你將收到所有新文章和討論話題的通知，未讀和新討論話題的數量也將出現在討論話題的列表旁。"
       tracked_categories: "追蹤"
       tracked_categories_instructions: "你將自動追蹤這些分類的新話題，未讀和新文章的數量會出現在話題的列表旁。"
-      muted_categories: "靜音"
+      muted_categories: "忽略"
       muted_categories_instructions: "你將不會收到此分類的新討論話題通知，以及不會出現在未讀欄內。"
       delete_account: "刪除我的帳號"
       delete_account_confirm: "你真的要刪除帳號嗎?此動作不能被還原!"
@@ -316,6 +318,11 @@ zh_TW:
         instructions: "我們不會公開您的電子郵件信箱。"
         ok: "我們將寄一封確認郵件給您。"
         invalid: "請輸入有效的電子郵件地址。"
+        authenticated: "你的 Email 已由 {{provider}} 驗證完成。"
+        frequency:
+          zero: "如果您沒有閱讀過重要通知，我們會立即發送電子郵件給您。"
+          one: "如果您沒有閱讀過重要通知，我們只會在您沒有登入網站時才會發送電子郵件給您。"
+          other: "如果您沒有閱讀過重要通知，我們只會在您最近 {{count}} 分鐘內沒有登入網站時才會發送電子郵件給您。"
       name:
         title: "名稱"
         instructions: "您的全名 (選填)。"
@@ -459,8 +466,8 @@ zh_TW:
     week_desc: '最近 7 天內建立的討論話題'
     day: '天'
     first_post: 第一篇文章
-    mute: 靜音
-    unmute: 取消靜音
+    mute: 忽略
+    unmute: 取消忽略
     last_post: 最後一篇文章
     last_post_lowercase: 最近發表
     summary:
@@ -559,7 +566,7 @@ zh_TW:
       reply_here: "在此回覆"
       reply: "回覆"
       cancel: "取消"
-      create_topic: "新討論話題"
+      create_topic: "發表話題"
       create_pm: "私人訊息"
       title: "或者按 Ctrl+Enter"
       users_placeholder: "新增用戶"
@@ -631,7 +638,10 @@ zh_TW:
       title_with_attachments: "加入一張圖片或一個檔案"
       from_my_computer: "從我的電腦"
       from_the_web: "從網站"
+      remote_tip: "圖片連結"
+      remote_tip_with_attachments: "圖片或文件連結 ({{authorized_extensions}})"
       local_tip: "按此從你的電腦選擇圖片"
+      local_tip_with_attachments: "從你的裝置中選擇圖片或文件（支援的格式： ({{authorized_extensions}})）。"
       hint: "(你也可以將檔案拖放至編輯器直接上傳)"
       hint_for_supported_browsers: "( 你也可以將圖片拖放或貼上至編輯器內直接上傳 )"
       uploading: "正在上傳"
@@ -773,24 +783,27 @@ zh_TW:
           '0': '你正忽略此討論話題的所有通知。'
         watching_pm:
           title: "關注中"
-          description: "當此私人信息有新回覆時會通知你，討論話題旁將會顯示未讀及新文章數。"
+          description: "當此私人信息有新回覆時會通知你。"
         watching:
           title: "關注"
-          description: "當此討論話題有新回覆時會通知你，討論話題旁將會顯示未讀及新文章數。"
+          description: "當此討論話題有新回覆時會通知你。"
         tracking_pm:
           title: "追蹤"
           description: "未讀和新文章的數量將會出現在私訊旁。你只會在別人標記您 @name 或回覆您的主題時才會被提醒。"
         tracking:
           title: "追蹤"
+          description: "未讀和新文章的數量將出現在討論話題旁。您只會在別人@您或回覆您的主題時才會收到通知。"
         regular:
-          title: "普通"
+          title: "一般"
+          description: "只有當有人@您或者回覆您的文章時，您才會收到通知。"
         regular_pm:
           title: "一般"
+          description: "只有當有人@您或者用私人訊息回覆您的文章時，您才會收到通知。"
         muted_pm:
-          title: "靜音"
+          title: "忽略"
           description: "你將不會收到任何關於此私人訊息的通知，此討論話題也不會出現在你的未讀清單裡。"
         muted:
-          title: "靜音"
+          title: "忽略"
           description: "你將不會收到任何關於此討論話題的通知，此討論話題也不會出現在你的未讀分頁裡。"
       actions:
         recover: "復原已刪除的討論話題"
@@ -846,6 +859,7 @@ zh_TW:
       filters:
         n_posts:
           other: "{{count}} 則文章"
+        cancel: "取消過濾"
       split_topic:
         title: "移至新討論話題"
         action: "移至新討論話題"
@@ -1096,14 +1110,19 @@ zh_TW:
       notifications:
         watching:
           title: "關注"
+          description: "您將會自動監視這些分類中的所有新主題。您會收到新文章或新主題的通知，未讀和新文章數量將出現在每個主題後。"
         tracking:
           title: "追蹤"
+          description: "您將會自動追蹤這些分類中的所有新主題。未讀和新文章數量將出現在每個主題後。"
         regular:
           title: "一般"
+          description: "只有當有人@您或回覆您的文章時，您才會收到通知。"
         muted:
-          title: "靜音"
+          title: "忽略"
           description: "你將不會收到這些分類中的新討論話題通知，它們也不會出現在你的未讀欄內。"
     flagging:
+      title: '感謝幫助社群遠離邪惡！'
+      private_reminder: '標記是不公開的，<b>只有</b> 工作人員才可看到'
       action: '投訴文章'
       take_action: "執行動作"
       notify_action: '通知'
@@ -1119,11 +1138,14 @@ zh_TW:
         off_topic: "離題內容"
         inappropriate: "不當內容"
         spam: "垃圾內容"
+      custom_placeholder_notify_user: "請具體說明出有建設性且溫和的意見。"
+      custom_placeholder_notify_moderators: "讓我們知道您的意見，並請盡可能地提供相關連結和例子。"
       custom_message:
         at_least: "請至少輸入 {{n}} 個字"
         more: "還需要 {{n}} 個字..."
         left: "還剩下 {{n}} 個字"
     flagging_topic:
+      title: "感謝幫助社群遠離邪惡！"
       action: "投訴討論話題"
       notify_action: "Notify"
     topic_map:
@@ -1152,6 +1174,12 @@ zh_TW:
     posts: "文章"
     posts_lowercase: "文章"
     posts_long: "此討論話題有 {{number}} 篇文章"
+    posts_likes_MF: |
+      這個主題有 {count, plural, one {1 篇文章} other {# 篇文章}}，{ratio, select,
+      low {並被很多人按讚了}
+      med {並被非常多人按讚了}
+      high {並被特別多人按讚了}
+      other {}}
     original_post: "原始文章"
     views: "觀看"
     views_lowercase: "觀看"
@@ -1233,6 +1261,7 @@ zh_TW:
         this_week: "本週"
         today: "今天"
         other_periods: "看更多精選討論話題"
+    browser_update: '抱歉，<a href="http://www.discourse.org/faq/#browser">您的瀏覽器版本太舊，無法正常訪問該站點。</a>。請<a href="http://browsehappy.com">升級您的瀏覽器</a>。'
     permission_types:
       full: "建立 / 回覆 / 觀看"
       create_post: "回覆 / 觀看"
@@ -1296,7 +1325,9 @@ zh_TW:
         agree_flag: "同意投訴"
         agree_flag_title: "同意投訴且不更動文章"
         defer_flag: "延遲"
+        defer_flag_title: "移除標記；不需處理。"
         delete: "刪除"
+        delete_title: "刪除此標記文章。"
         delete_post_defer_flag: "刪除文章並且延緩檢舉"
         delete_post_defer_flag_title: "刪除文章，如果刪除的是討論話題的第一則文章，討論話題也將一併刪除"
         delete_post_agree_flag: "刪除文章並且同意檢舉"
@@ -1418,10 +1449,15 @@ zh_TW:
             title: "回溯資料庫到以前的工作階段"
             confirm: "你確定要回溯資料庫到以前的工作階段?"
       export_csv:
+        success: "匯出開始，您將可以馬上看到進度通知。"
         failed: "匯出失敗。請觀看紀錄。"
         button_text: "匯出"
         button_title:
           user: "以 CSV 格式匯出用戶清單"
+          staff_action: "以 CSV 格式匯出所有工作人員操作紀錄"
+          screened_email: "以 CSV 格式匯出所有已顯示的電子郵件列表"
+          screened_ip: "以 CSV 格式匯出所有已顯示的 IP 列表"
+          screened_url: "以 CSV 格式匯出所有已顯示的 URL 列表"
       customize:
         title: "客製化"
         long_title: "網站客製化"
@@ -1511,6 +1547,7 @@ zh_TW:
         sent_test: "已送出!"
         delivery_method: "傳送方式"
         preview_digest: "預覽文摘"
+        preview_digest_desc: "預覽每周寄送給不活躍用戶的摘要郵件內容。"
         refresh: "重新整理"
         format: "格式"
         html: "html"
@@ -1572,6 +1609,7 @@ zh_TW:
             check_email: "檢查電子郵件"
             delete_topic: "刪除討論話題"
             delete_post: "刪除文章"
+            impersonate: "檢視"
         screened_emails:
           title: "過濾的電子郵件地址"
           description: "以下的電子郵件地址將無法用來建立新用戶。"
@@ -1587,6 +1625,9 @@ zh_TW:
           title: "過濾的 IP 位址"
           description: '受監控的 IP 位址，使用 "允許" 將 IP 位址加入白名單。'
           delete_confirm: "你確定要刪除 %{ip_address} 的規則嗎?"
+          roll_up_confirm: "您確定要將常用的 IP 地址歸類為子網域位址嗎？"
+          rolled_up_some_subnets: "成功地 roll up 了 IP 封鎖記錄至這些子網域： %{subnets}。"
+          rolled_up_no_subnet: "無法 roll up"
           actions:
             block: "封鎖"
             do_nothing: "允許"
@@ -1595,6 +1636,9 @@ zh_TW:
             label: "新增:"
             ip_address: "IP 位址"
             add: "加入"
+          roll_up:
+            text: "Roll up"
+            title: "如果有至少 'min_ban_entries_for_roll_up' 個記錄，建立一個子網域封鎖記錄"
         logster:
           title: "錯誤紀錄"
       impersonate:
@@ -1615,6 +1659,7 @@ zh_TW:
           staff: '管理員'
           suspended: '已停權'
           blocked: '已封鎖'
+          suspect: '嫌疑'
         approved: "已批准？"
         approved_selected:
           other: "批准用戶 ({{count}})"
@@ -1634,6 +1679,7 @@ zh_TW:
           moderators: '板主'
           blocked: '已封鎖的用戶'
           suspended: '已停權的用戶'
+          suspect: '嫌疑使用者'
         reject_successful:
           other: "成功拒絕 %{count} 個用戶。"
         reject_failures:
@@ -1910,6 +1956,7 @@ zh_TW:
       actions:
         title: '行動'
         star: '<b>f</b> 收藏討論話題'
+        pin_unpin_topic: '<b>shift p</b> 置頂/取消置頂'
         share_topic: '<b>shift s</b> 分享討論話題'
         share_post: '<b>s</b> 分享文章'
         reply_as_new_topic: '<b>t</b> 回覆為關聯主題'
