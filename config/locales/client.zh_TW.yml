@@ -708,8 +708,8 @@ zh_TW:
         top: "沒有更多精選討論話題。"
     topic:
       filter_to: "在討論話題裡顯示 {{post_count}} 文章"
-      create: '新討論話題'
-      create_long: '建立新討論話題'
+      create: '發表話題'
+      create_long: '發表新討論話題'
       private_message: '建立私人訊息'
       list: '討論話題'
       new: '新討論話題'
